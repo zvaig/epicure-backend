@@ -15,12 +15,12 @@
   // Here you describe each environment
   "deploy": {
     "development": { // development, staging,production
-      "key": "C:\Users\User\Desktop.aws-key.pem",
+      "key": "C:/aws-key.pem",
       "user": "ubuntu",// default on AWS, may change
       // Multi host is possible, just by passing IPs/hostname as an array
 
-      "host": [         {ec2-63-35-220-154.eu-west-1.compute.amazonaws.com}
-      ],
+      "host":         "ec2-63-35-220-154.eu-west-1.compute.amazonaws.com"
+      ,
       // Branch
       "ref": "origin/master",
       // Git repository to clone
