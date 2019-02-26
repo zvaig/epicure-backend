@@ -1,0 +1,43 @@
+  {
+  // Applications part
+   "apps": [
+    {
+      "name": "Epicure",// this is the name of the process you will see when running pm2 list
+      "script": "./bin/www",
+      // Environment variables injected when starting with --env production
+      // http://pm2.keymetrics.io/docs/usage/application-declaration/#switching-to-different-environments
+      "env": {
+         "NODE_ENV": "development"
+      }
+    }
+  ],
+  // Deployment part
+  // Here you describe each environment
+  "deploy": {
+    "development": { // development, staging,production
+      "key": "C:\Users\User\Desktop.aws-key.pem",
+      "user": "ubuntu",// default on AWS, may change
+      // Multi host is possible, just by passing IPs/hostname as an array
+
+      "host": [         {ec2-63-35-220-154.eu-west-1.compute.amazonaws.com}
+      ],
+      // Branch
+      "ref": "origin/master",
+      // Git repository to clone
+      "repo": "git@github.com:zvaig/epicure-backend.git",
+      // Path of the application on target servers
+      "path": "/home/ubuntu/backend",
+      // Can be used to give options in the format used in the configura-
+      // tion file.  This is useful for specifying options for which there
+      // is no separate command-line flag, see 'man ssh'
+      // can be either a single string or an array of strings
+      "ssh_options": "StrictHostKeyChecking=no",
+      // Commands to be executed on the server after the repo has been cloned
+      "post-deploy": "cp ~/.env . && apidoc -i apidoc -o webApidoc && npm install && mkdir -p logs && pm2 startOrRestart ecosystem.json --env {{env}}&& pm2 save",
+      // Environment variables that must be injected in all applications on this env
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}
