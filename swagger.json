@@ -1,0 +1,225 @@
+{
+	"openapi" : "3.0.1",
+	"info" : {
+	  "title" : "defaultTitle",
+	  "description" : "defaultDescription",
+	  "version" : "0.1"
+	},
+	"servers" : [ {
+	  "url" : "http://tom-dev.moveodevelop.com"
+	} ],
+	"paths" : {
+	  "/api/v1/user" : {
+		"get" : {
+		  "description" : "Auto generated using Swagger Inspector",
+		  "parameters" : [ {
+			"name" : "Server-App-Auth",
+			"in" : "header",
+			"required" : false,
+			"style" : "simple",
+			"explode" : false,
+			"schema" : {
+			  "type" : "string"
+			},
+			"example" : "NoJ20bK27$vj5W3Ome41hEy04f*FC1988"
+		  } ],
+		  "responses" : {
+			"200" : {
+			  "description" : "Auto generated using Swagger Inspector",
+			  "content" : {
+				"application/json; charset=utf-8" : {
+				  "schema" : {
+					"type" : "string"
+				  },
+				  "examples" : { }
+				}
+			  }
+			}
+		  }
+		}
+	  },
+	  "/api/v1/access/login" : {
+		"post" : {
+		  "description" : "Auto generated using Swagger Inspector",
+		  "parameters" : [ {
+			"name" : "Server-App-Auth",
+			"in" : "header",
+			"required" : false,
+			"style" : "simple",
+			"explode" : false,
+			"schema" : {
+			  "type" : "string"
+			},
+			"example" : "NoJ20bK27$vj5W3Ome41hEy04f*FC1988"
+		  } ],
+		  "requestBody" : {
+			"content" : {
+			  "application/json" : {
+				"schema" : {
+				  "$ref" : "#/components/schemas/body"
+				}
+			  }
+			}
+		  },
+		  "responses" : {
+			"200" : {
+			  "description" : "Auto generated using Swagger Inspector",
+			  "content" : {
+				"application/json; charset=utf-8" : {
+				  "schema" : {
+					"type" : "string"
+				  },
+				  "examples" : { }
+				}
+			  }
+			}
+		  }
+		}
+	  },
+	  "/api/v1/access/register" : {
+		"post" : {
+		  "description" : "Auto generated using Swagger Inspector",
+		  "parameters" : [ {
+			"name" : "Server-App-Auth",
+			"in" : "header",
+			"required" : false,
+			"style" : "simple",
+			"explode" : false,
+			"schema" : {
+			  "type" : "string"
+			},
+			"example" : "NoJ20bK27$vj5W3Ome41hEy04f*FC1988"
+		  } ],
+		  "requestBody" : {
+			"content" : {
+			  "application/json" : {
+				"schema" : {
+				  "$ref" : "#/components/schemas/body_1"
+				}
+			  }
+			}
+		  },
+		  "responses" : {
+			"200" : {
+			  "description" : "Auto generated using Swagger Inspector",
+			  "content" : {
+				"application/json; charset=utf-8" : {
+				  "schema" : {
+					"type" : "string"
+				  },
+				  "examples" : { }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	},
+	"components" : {
+	  "schemas" : {
+		"body_1" : {
+		  "type" : "object",
+		  "properties" : {
+			"skills" : {
+			  "type" : "string",
+			  "example" : "JavaScript, Angular7, Node.js, React, HTML"
+			},
+			"zipCode" : {
+			  "type" : "string",
+			  "example" : "1234"
+			},
+			"address" : {
+			  "type" : "string",
+			  "example" : "Har Sinai 1"
+			},
+			"imageUrl" : {
+			  "type" : "string",
+			  "example" : "http://www.stevensegallery.com/300/120"
+			},
+			"basicUserInformation" : {
+			  "$ref" : "#/components/schemas/apiv1accessregister_basicUserInformation"
+			},
+			"dateOfBirth" : {
+			  "type" : "string",
+			  "example" : "1998-11-20T16:26:25.163Z"
+			},
+			"memberType" : {
+			  "type" : "string",
+			  "example" : "member"
+			},
+			"tellUsAboutYourself" : {
+			  "type" : "string",
+			  "example" : "I love JavaScript!!"
+			},
+			"howDidYouHearAboutTom" : {
+			  "type" : "string",
+			  "example" : "I saw the tv ad."
+			}
+		  }
+		},
+		"apiv1accessregister_basicUserInformation" : {
+		  "type" : "object",
+		  "properties" : {
+			"profession" : {
+			  "type" : "string",
+			  "example" : "Developer"
+			},
+			"firstName" : {
+			  "type" : "string",
+			  "example" : "Walter"
+			},
+			"lastName" : {
+			  "type" : "string",
+			  "example" : "Shaw"
+			},
+			"passwordConfirmation" : {
+			  "type" : "string",
+			  "example" : "12345678"
+			},
+			"password" : {
+			  "type" : "string",
+			  "example" : "12345678"
+			},
+			"city" : {
+			  "type" : "string",
+			  "example" : "Tel Aviv"
+			},
+			"email" : {
+			  "type" : "string",
+			  "example" : "tom3@gmail.com"
+			}
+		  }
+		},
+		"body" : {
+		  "type" : "object",
+		  "properties" : {
+			"passwordConfirmation" : {
+			  "type" : "string",
+			  "example" : "12345678"
+			},
+			"password" : {
+			  "type" : "string",
+			  "example" : "12345678"
+			},
+			"email" : {
+			  "type" : "string",
+			  "example" : "tom3@gmail.com"
+			}
+		  }
+		}
+	  },
+	  "securitySchemes" : {
+		"oauth2" : {
+		  "type" : "oauth2",
+		  "flows" : {
+			"implicit" : {
+			  "authorizationUrl" : "http://yourauthurl.com",
+			  "scopes" : {
+				"scope_name" : "Enter your scopes here"
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }

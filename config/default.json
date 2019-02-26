@@ -1,0 +1,41 @@
+{
+	"is_production": false,
+	"MongoDB": {
+		"Configurations": {
+			"host": "localhost",
+			"user": "",
+			"password": "",
+			"port": "27017",
+			"database": "EpicureDB"
+		},
+		"currentVersion": 1
+	},
+	"Security": {
+		"Request": {
+			"Header": {
+				"key": "Server-App-Auth",
+				"value": "NoJ20bK27$vj5W3Ome41hEy04f*FC1988"
+			},
+			"apiToken": {
+				"key": "JWT-Token",
+				"value": "14pfy30acnvdcgalc26sbuchc1cb6qidaaxbhfn97dj7iwndliewf9g2v38mwn5k78ex85mrjtmu1fiwetdo01fnlwlq1ppyal9wuf7kv6wn6ot3uosoicvdaphvunma"
+			},
+			"AdminToken": {
+				"key": "JWT-Token",
+				"value": "14pfy30acnvbcgalc26sbuchc1cb6qidaaxbhrn97dj7iwndliewf9g2v38mwn5k78ex75mrjtmu1fiwetdo01fnlwlq1ppyal1wuf7kv6wn6ot5uosojcvdaphvunma"
+			}
+		},
+		"ForgotPassword": {
+			"hoursExpiry": 2400
+		}
+	},
+	"Mailgun": {
+		"apiKey": "key-5ec3b92f291420550b4c5aa87b124557",
+		"domain": "sandbox6296f5e674cf4b06b0b3eed858d01314.mailgun.org",
+		"sender": "elad@moveo.co.il",
+		"recipient": "elad@moveo.co.il"
+	},
+	"Notifications": {
+		"SERVER_KEY": ""
+	}
+}
