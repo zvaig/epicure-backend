@@ -11,7 +11,7 @@ var tokenConfig = require('config').get('Security.Request.AdminToken');
  
 var mongoose = require('mongoose'),
     Admin_User = require('../../../../db/models/userModel'),
-    NormalAuth_Admin = require('../../../../db/models/AuthModel');
+    NormalAuth_Admin = require('../../../../db/models/authModel');
  
  
 const bcrypt = require('bcrypt');
