@@ -2,7 +2,7 @@
   // Applications part
    "apps": [
     {
-      "name": "Epicure",// this is the name of the process you will see when running pm2 list
+      "name": "development",// this is the name of the process you will see when running pm2 list
       "script": "./bin/www",
       // Environment variables injected when starting with --env production
       // http://pm2.keymetrics.io/docs/usage/application-declaration/#switching-to-different-environments
