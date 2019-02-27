@@ -33,7 +33,7 @@
       // can be either a single string or an array of strings
       "ssh_options": "StrictHostKeyChecking=no",
       // Commands to be executed on the server after the repo has been cloned
-      "post-deploy": "npm install && mkdir -p logs && pm2 startOrRestart ecosystem.json --env development&& pm2 save",
+      "post-deploy": "./sc.sh",
       // Environment variables that must be injected in all applications on this env
       "env": {
         "NODE_ENV": "development"
